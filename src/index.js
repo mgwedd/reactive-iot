@@ -1,6 +1,24 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
-import './index.css'
+require('dotenv').config()
 
-ReactDOM.render(<App />, document.getElementById('root'))
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import App from './components/App'
+import configureStore from './configureStore'
+
+
+const store = configureStore()
+
+const renderApp = () =>
+  render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById('root')
+  )
+
+if (process.env.NODE_ENV !== 'production' && module.hot) {
+  module.hot.accept('./components/App', renderApp)
+}
+
+renderApp()
