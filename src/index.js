@@ -1,11 +1,9 @@
-require('dotenv').config()
-
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import App from './components/App'
-import configureStore from './configureStore'
-
+import configureStore from './state/configureStore'
+// import config from './config'
+import App from './App'
 
 const store = configureStore()
 
@@ -18,7 +16,7 @@ const renderApp = () =>
   )
 
 if (process.env.NODE_ENV !== 'production' && module.hot) {
-  module.hot.accept('./components/App', renderApp)
+  module.hot.accept('./App', renderApp)
 }
 
 renderApp()

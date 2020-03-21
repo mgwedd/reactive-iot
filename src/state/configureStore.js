@@ -2,7 +2,7 @@ import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
 
 import monitorReducersEnhancer from './enhancers/monitorReducers'
 import loggerMiddleware from './middleware/logger'
-import rootReducer from './reducers'
+import rootReducer from './reducers/RootReducer'
 
 export default function configureAppStore(preloadedState) {
   const store = configureStore({
@@ -13,7 +13,7 @@ export default function configureAppStore(preloadedState) {
   })
 
   if (process.env.NODE_ENV !== 'production' && module.hot) {
-    module.hot.accept('./reducers', () => store.replaceReducer(rootReducer))
+    // module.hot.accept('./reducers', () => store.replaceReducer(rootReducer))
   }
 
   return store
