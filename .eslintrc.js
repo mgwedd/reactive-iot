@@ -22,6 +22,8 @@ module.exports = {
     'react',
   ],
   rules: {
-    'space-in-parens': ['error', 'always']
+    'space-in-parens': ['error', 'always'],
+    'semi' : 'off',
+    'react/prop-types' : 'off'
   },
 };
