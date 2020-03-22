@@ -1,7 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react'
+
+import ScreenContainer from '../components/ScreenContainer'
+
+import styles from './styles/BlogScreen.module.css'
 
 export default function BlogScreen( props ) {
   return (
-    <h2>Welcome to the Blog</h2>
-  );
+    <ScreenContainer>
+      <h2>Welcome to the Blog</h2>
+    </ScreenContainer>
+  )
 }
