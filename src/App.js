@@ -1,9 +1,10 @@
 import React from 'react'
+import Routes from './router/Routes'
 
 function App() {
   return (
     <main className='App'>
-      {/* content goes here */}
+     <Routes />
     </main>
   )
 }
