@@ -24,6 +24,18 @@ module.exports = {
   rules: {
     'space-in-parens': ['error', 'always'],
     'semi' : 'off',
-    'react/prop-types' : 'off'
+    'react/prop-types' : 'off',
+    'array-bracket-spacing' : 'always',
+    "key-spacing": [2, {
+      "singleLine": {
+          "beforeColon": false,
+          "afterColon": true
+      },
+      "multiLine": {
+          "beforeColon": true,
+          "afterColon": true,
+          "align": "colon"
+      }
+  }]
   },
-};
+}
