@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 import styles from './styles/PostPreview.module.css'
 
@@ -8,8 +9,10 @@ export default function Post( props ) {
 
   return (
     <article className={styles.container}>
-      <h2>{post?.title}</h2>
-      <p>{post?.summary}</p>
+      <Link className={styles.link} style={{ textDecoration : 'none' }}>
+        <h2 className={styles.title}>{post?.title}</h2>
+      </Link>
+      <p className={styles.summary}>{post?.summary}</p>
     </article>
   )
 }

@@ -20,7 +20,7 @@ class BlogScreen extends Component {
     return (
       <ScreenContainer>
         <ContentContainer>
-          <Header title="Reactive IoT Blog" />
+          <Header title="Reactive IoT" />
           <PostList />
         </ContentContainer>
       </ScreenContainer>

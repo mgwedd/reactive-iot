@@ -2,5 +2,21 @@
   display : flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+}
+
+.title {
+  width : 100%;
+  text-align: left;
+}
+
+.link:visited {
+  color: #b87333;
+}
+
+.link:hover {
+  color: lightgreen;
+}
+
+.link:active {
+  color: lightblue;
 }
