@@ -1,5 +1,8 @@
 # React IoT Blog
 
+Deployed Dev URL: [https://reactive-iot.herokuapp.com/](Reactive IoT)
+Deployed Pro URL: TBA
+
 ## Available Scripts
 
 In the project directory, you can run:
