@@ -1,4 +1,4 @@
-# Michael Wedd's Personal Blog
+# React IoT Blog
 
 ## Available Scripts
 

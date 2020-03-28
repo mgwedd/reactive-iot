@@ -1,12 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { DataSelectors } from '../state/selectors'
 import { Posts } from '../state/actions'
 import { ScreenContainer, Header } from '../components'
 import styles from './styles/BlogScreen.module.css'
-
-class BlogScreen extends React.Component {
+class BlogScreen extends Component {
 
   componentDidMount() {
     const { fetchPosts } = this.props
