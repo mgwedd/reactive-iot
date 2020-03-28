@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import { ScreenContainer, ContentContainer, Header, PostList } from '../components'
+
 import { DataSelectors } from '../state/selectors'
 import { Posts } from '../state/actions'
-import { ScreenContainer, Header } from '../components'
+
 import styles from './styles/BlogScreen.module.css'
 class BlogScreen extends Component {
 
@@ -13,10 +15,14 @@ class BlogScreen extends Component {
   }
 
   render() {
+    const { posts } = this.props
+
     return (
       <ScreenContainer>
-        <Header
-          title="Reactive IoT Blog" />
+        <ContentContainer>
+          <Header title="Reactive IoT Blog" />
+          <PostList />
+        </ContentContainer>
       </ScreenContainer>
     )
   }
@@ -27,6 +33,6 @@ export default connect(
     posts : DataSelectors.getPosts( state )
   } ),
   ( dispatch ) => ( {
-    fetchPosts : () => { dispatch( Posts.fetchRange() ) }
+    fetchPosts : () => dispatch( Posts.fetchRange() )
   } ),
 )( BlogScreen )
