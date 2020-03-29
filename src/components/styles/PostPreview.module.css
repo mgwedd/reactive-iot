@@ -9,6 +9,10 @@
   text-align: left;
 }
 
+.link {
+  color: #b87333;
+}
+
 .link:visited {
   color: #b87333;
 }

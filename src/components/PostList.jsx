@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import TestUtils from '../tests/testUtils'
-
 import { PostPreview } from './index'
 
 import styles from './styles/PostList.module.css'

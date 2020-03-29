@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 import styles from './styles/PostPreview.module.css'
 
-export default function Post( props ) {
+export default function PostPreview( props ) {
   const { post = {} } = props
 
   return (
@@ -20,6 +20,6 @@ export default function Post( props ) {
   )
 }
 
-Post.propTypes = {
+PostPreview.propTypes = {
   post : PropTypes.object.isRequired,
 }
