@@ -9,7 +9,10 @@ export default function Post( props ) {
 
   return (
     <article className={styles.container}>
-      <Link className={styles.link} style={{ textDecoration : 'none' }}>
+      <Link
+        to={post?.slug}
+        className={styles.link}
+        style={{ textDecoration : 'none' }}>
         <h2 className={styles.title}>{post?.title}</h2>
       </Link>
       <p className={styles.summary}>{post?.summary}</p>

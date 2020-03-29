@@ -14,5 +14,5 @@ export default function ContentContainer( props ) {
 }
 
 ContentContainer.propTypes = {
-  children : PropTypes.element,
+  children : PropTypes.oneOfType( [ PropTypes.element, PropTypes.array ] ),
 }

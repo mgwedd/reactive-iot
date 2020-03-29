@@ -1,16 +1,13 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-} from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 /* Screens */
-import PostScreen from '../screens/PostScreen';
-import BlogScreen from '../screens/BlogScreen';
+import PostScreen from '../screens/PostScreen'
+import BlogScreen from '../screens/BlogScreen'
 
 export default function Routes() {
   return (
-    <Router>
+    <BrowserRouter>
       <Route
         exact
         path="/:slug"
@@ -21,6 +18,6 @@ export default function Routes() {
         path="/"
         component={BlogScreen}
       />
-    </Router>
-  );
+    </BrowserRouter>
+  )
 }
