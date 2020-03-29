@@ -10,7 +10,10 @@ export default function PostPreview( props ) {
   return (
     <article className={styles.container}>
       <Link
-        to={post?.slug}
+        to={{
+          pathname : post?.slug,
+          state : { postId : post?.id }
+        }}
         className={styles.link}
         style={{ textDecoration : 'none' }}>
         <h2 className={styles.title}>{post?.title}</h2>

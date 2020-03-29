@@ -3,6 +3,7 @@ import ContentContainer from './ContentContainer'
 import Header from './Header'
 import PostList from './PostList'
 import PostPreview from './PostPreview'
+import Post from './Post'
 
 export {
   ScreenContainer,
@@ -10,4 +11,5 @@ export {
   Header,
   PostList,
   PostPreview,
+  Post,
 }

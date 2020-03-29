@@ -10,18 +10,20 @@ import styles from './styles/BlogScreen.module.css'
 class BlogScreen extends Component {
 
   componentDidMount() {
-    const { fetchPosts } = this.props
-    fetchPosts()
+    const { posts, fetchPosts } = this.props
+    if ( !Object.keys( posts ).length ) {
+      fetchPosts()
+    }
   }
 
   render() {
     const { posts } = this.props
-
+    console.log( 'psots in blog scren', posts )
     return (
       <ScreenContainer>
         <ContentContainer>
           <Header title="Reactive IoT" />
-          <PostList />
+          <PostList posts={posts}/>
         </ContentContainer>
       </ScreenContainer>
     )

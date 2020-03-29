@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import styles from './styles/Post.module.css'
 
@@ -7,9 +8,9 @@ export default function Post( props ) {
 
   return (
     <article className={styles.container}>
-      <h2 className={styles.title}>{post?.title}</h2>
-      <p className={styles.summary}>{post?.summary}</p>
-      <p className={styles.content}>{post?.summary}</p>
+      <h2 className={styles.title}>{`Title: ${post?.title}`}</h2>
+      <p className={styles.summary}>{`Summary: ${post?.summary}`}</p>
+      <p className={styles.content}>{`Article: ${post?.summary}`}</p>
     </article>
   )
 }

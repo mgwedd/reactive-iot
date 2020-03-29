@@ -11,6 +11,7 @@ function Post( state = initialState, action ) {
 
     case Constants.FETCH_POSTS: {
       const { posts } = action.payload
+
       return {
         ...state,
         list : posts,
