@@ -2,23 +2,23 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-import styles from './styles/PostPreview.module.css'
+import S from './styles/PostPreview.module.css'
 
 export default function PostPreview( props ) {
   const { post = {} } = props
 
   return (
-    <article className={styles.container}>
+    <article className={S.container}>
       <Link
         to={{
           pathname : post?.slug,
           state : { postId : post?.id }
         }}
-        className={styles.link}
+        className={S.link}
         style={{ textDecoration : 'none' }}>
-        <h2 className={styles.title}>{post?.title}</h2>
+        <h2 className={S.title}>{post?.title}</h2>
       </Link>
-      <p className={styles.summary}>{post?.summary}</p>
+      <p className={S.summary}>{post?.summary}</p>
     </article>
   )
 }

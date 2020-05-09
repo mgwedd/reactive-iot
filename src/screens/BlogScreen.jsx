@@ -6,7 +6,7 @@ import { ScreenContainer, ContentContainer, Header, PostList } from '../componen
 import { DataSelectors } from '../state/selectors'
 import { Posts } from '../state/actions'
 
-import styles from './styles/BlogScreen.module.css'
+import S from './styles/BlogScreen.module.css'
 class BlogScreen extends Component {
 
   componentDidMount() {
@@ -18,7 +18,7 @@ class BlogScreen extends Component {
 
   render() {
     const { posts } = this.props
-    console.log( 'psots in blog scren', posts )
+    // console.log( 'posts in blog scren', posts )
     return (
       <ScreenContainer>
         <ContentContainer>

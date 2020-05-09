@@ -1,12 +1,21 @@
 import React from 'react'
+import { ErrorBoundary } from 'react-error-boundary'
+
 import Routes from './router/Routes'
-import styles from './App.module.css'
+
+import ErrorFallback from './components/ErrorFallback'
+
+import S from './App.module.css'
 
 function App() {
   return (
-    <main className={styles.defaults}>
-      <Routes />
-    </main>
+    <ErrorBoundary
+    FallbackComponent={ErrorFallback}
+    onError={() => console.log( 'Top-level app container error boundary caught error')}>
+      <main className={S.defaults}>
+        <Routes />
+      </main>
+    </ErrorBoundary>
   )
 }
 

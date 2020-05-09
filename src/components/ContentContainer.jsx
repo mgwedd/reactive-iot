@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './styles/ContentContainer.module.css'
+import S from './styles/ContentContainer.module.css'
 
 export default function ContentContainer( props ) {
   const { children } = props
 
   return (
-    <section className={styles.container}>
+    <section className={S.container}>
       {children}
     </section>
   )

@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import { ScreenContainer, ContentContainer, Post } from '../components'
 
+import Header from '../components/Header'
 import { Posts as PostActions } from '../state/actions'
 import { DataSelectors } from '../state/selectors'
 
-import styles from './styles/PostScreen.module.css'
+import S from './styles/PostScreen.module.css'
 class PostScreen extends Component {
 
   // TODO temporary
@@ -24,11 +26,16 @@ class PostScreen extends Component {
     return (
       <ScreenContainer>
         <ContentContainer>
+          <Header title="Reactive IoT" />
           <Post post={post} />
         </ContentContainer>
       </ScreenContainer>
     )
   }
+}
+
+PostScreen.propTypes = {
+  post : PropTypes.object.isRequired,
 }
 
 export default connect(
