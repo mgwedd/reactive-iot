@@ -1,4 +1,5 @@
 .defaults {
   font-family: 'Merriweather', serif;
   color : white;
+  -webkit-font-smoothing: antialiased;
 }
